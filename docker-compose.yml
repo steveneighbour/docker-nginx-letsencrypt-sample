@@ -41,7 +41,7 @@ services:
   sample-api:
     restart: always
     image: sample-api
-    build: ./samples/api
+#    build: ./samples/api
     container_name: sample-api
     environment:
       - VIRTUAL_HOST=rancherserver.westcentralus.cloudapp.azure.com
@@ -53,7 +53,7 @@ services:
   sample-website:
     restart: always
     image: sample-website
-    build: ./samples/website
+#    build: ./samples/website
     container_name: sample-website
     volumes:
       - "./volumes/nginx-sample-website/conf.d/:/etc/nginx/conf.d"
