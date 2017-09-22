@@ -2,6 +2,7 @@ version: "2"
 
 services:
   nginx:
+    command: git clone -b docker https://bf101f78fc7bbe817c2027db8db443640ef19cbb:x-oauth-basic@github.com/steveneighbour/docker-nginx-letsencrypt-sample.git
     restart: always
     image: nginx
     container_name: nginx
