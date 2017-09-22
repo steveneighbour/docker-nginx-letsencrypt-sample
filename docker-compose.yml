@@ -43,11 +43,11 @@ services:
     build: ./samples/api
     container_name: sample-api
     environment:
-      - VIRTUAL_HOST=sampleapi.example.com
+      - VIRTUAL_HOST=rancherserver.westcentralus.cloudapp.azure.com
       - VIRTUAL_NETWORK=nginx-proxy
       - VIRTUAL_PORT=3000
-      - LETSENCRYPT_HOST=sampleapi.example.com
-      - LETSENCRYPT_EMAIL=email@example.com
+      - LETSENCRYPT_HOST=rancherserver.westcentralus.cloudapp.azure.com
+      - LETSENCRYPT_EMAIL=steve.neighbour@gmail.com
 
   sample-website:
     restart: always
@@ -61,5 +61,5 @@ services:
       - VIRTUAL_HOST=samplewebsite.example.com
       - VIRTUAL_NETWORK=nginx-proxy
       - VIRTUAL_PORT=80
-      - LETSENCRYPT_HOST=sample.example.com
-      - LETSENCRYPT_EMAIL=email@example.com
+      - LETSENCRYPT_HOST=rancherserver.westcentralus.cloudapp.azure.com
+      - LETSENCRYPT_EMAIL=steve.neighbour@gmail.com
